@@ -1,0 +1,11 @@
+#include <ctime>
+#include <cstdlib> 
+
+// W funkcji głównej trzeba zainicjalizowac generator liczb losowych
+srand(time(NULL));
+
+// widac losowanie
+void wypeln_los(int *tab, int n, int min, int max){
+    for (int i=0;i<n;i++){
+        tab[i] = rand()%(max-min+1)+min;
+    }
